@@ -64,6 +64,8 @@ public class CheckInActivity extends ListActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     Intent intent = new Intent(CheckInActivity.this,Report.class);
+                    intent.putExtra("latitude",latitude);
+                    intent.putExtra("longitude",longitude);
                     //based on item add info to intent
                     startActivity(intent);
                     }

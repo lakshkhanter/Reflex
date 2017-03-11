@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    Button btnShowLocation;
+    //Button btnShowLocation;
     private static final int REQUEST_CODE_PERMISSION = 2;
     String mPermission = Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -38,14 +38,14 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
 
-        btnShowLocation = (Button) findViewById(R.id.button);
+        //btnShowLocation = (Button) findViewById(R.id.button);
 
         // show activity_main button click event
-        btnShowLocation.setOnClickListener(new View.OnClickListener() {
+        /*btnShowLocation.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                // create class object
+                // create class object*/
                 gps = new GPSTracker(MainActivity.this);
 
                 // check if GPS enabled
@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
                 }
 
             }
-        });
-    }
+        /*});
+    }*/
 }
 

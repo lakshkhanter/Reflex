@@ -24,9 +24,15 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Report extends AppCompatActivity {
     private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseListAdapter<ChatMessage> adapter;
+    double latitude,longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        latitude=extras.getDouble("latitude");
+        longitude=extras.getDouble("longitude");
+        final String lat = String.valueOf(latitude);
+        final String lon = String.valueOf(longitude);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.report);
         //mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -51,30 +57,16 @@ public class Report extends AppCompatActivity {
 
             // Load chat room contents
             displayChatMessages();
+            FirebaseDatabase.getInstance()
+                    .getReference()
+                    .push()
+                    .setValue(new ChatMessage("PLEASE HELP\nLatitude : "+lat+"\nLongitude : "+lon,
+                            FirebaseAuth.getInstance()
+                                    .getCurrentUser()
+                                    .getDisplayName())
+                    );
         }
-        FloatingActionButton fab =
-                (FloatingActionButton)findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //EditText input = (EditText)findViewById(R.id.input);
-
-                // Read the input field and push a new instance
-                // of ChatMessage to the Firebase database
-                FirebaseDatabase.getInstance()
-                        .getReference()
-                        .push()
-                        .setValue(new ChatMessage("PLEASE HELP",
-                                FirebaseAuth.getInstance()
-                                        .getCurrentUser()
-                                        .getDisplayName())
-                        );
-
-                // Clear the input
-                //input.setText("");
-            }
-        });
     }
 
     private void displayChatMessages() {
