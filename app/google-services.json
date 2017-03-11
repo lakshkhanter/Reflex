@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1030978876606",
+    "firebase_url": "https://reflex-1da9b.firebaseio.com",
+    "project_id": "reflex-1da9b",
+    "storage_bucket": "reflex-1da9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030978876606:android:2ca82c490ad4c692",
+        "android_client_info": {
+          "package_name": "com.dank.reflex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030978876606-e8lamo6nckk3lua19r3h4g1c6dlr9mpb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dank.reflex",
+            "certificate_hash": "32f86527b991361247e9ea934a13e808e794196b"
+          }
+        },
+        {
+          "client_id": "1030978876606-pboovs01hkgs1tomglvahjqemungellr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmNx8dk-cAcLhEsH-fUrMb6lRZVoYwk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030978876606-pboovs01hkgs1tomglvahjqemungellr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
